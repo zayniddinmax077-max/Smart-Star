@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART STAR | Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass: rgba(255, 255, 255, 0.07);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Qora xiralashtiruvchi qatlam */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: -1;
+        }
+
+        h1, h2, h3, h4, .logo { 
+            font-family: 'Syncopate', sans-serif; 
+            text-transform: uppercase; 
+            font-style: normal;
+        }
+
+        /* Ultra Glass Karta */
+        .ultra-glass {
+            background: var(--glass);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: 35px;
+            transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .ultra-glass:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Shaffof list elementlari */
+        .glass-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            padding: 12px 20px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Yoyilish animatsiyasi */
+        .content-box {
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.7s ease;
+            overflow: hidden;
+        }
+        .ultra-glass:hover .content-box {
+            max-height: 600px;
+            opacity: 1;
+            padding: 2rem;
+        }
+
+        .nav-link {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+        .nav-link:hover { opacity: 1; color: #fff; }
+
+        .outline-txt { -webkit-text-stroke: 1.5px #fff; color: transparent; }
+
+        input, select {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus, select:focus { border-color: #fff !important; }
+        option { background: #111; color: white; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed w-full top-5 left-0 z-[100] px-4">
+        <nav class="max-w-6xl mx-auto ultra-glass py-5 px-10 flex justify-between items-center shadow-2xl">
+            <div class="logo font-black text-xl tracking-tighter">SmartStar</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="nav-link">Asosiy</a>
+                <a href="#teachers" class="nav-link">Ustozlar</a>
+                <a href="#socials" class="nav-link">Tarmoqlar</a>
+            </div>
+            <a href="#apply" class="bg-white text-black text-[9px] px-8 py-3 rounded-full font-black uppercase hover:scale-105 transition">Ro'yxatdan o'tish</a>
+        </nav>
+    </header>
+
+    <section id="hero" class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="ultra-glass w-full max-w-5xl p-20 text-center">
+            <h1 class="text-[9vw] font-black leading-none mb-6">SMART<br><span class="outline-txt">STAR</span></h1>
+            <p class="text-[11px] font-bold tracking-[0.8em] opacity-70 uppercase mb-4">Muvaffaqiyatli kelajak shu yerdan boshlanadi.</p>
+            <div class="w-24 h-0.5 bg-white mx-auto mb-4 opacity-20"></div>
+            <p class="text-[12px] font-bold opacity-40 tracking-[1.2em]">DIRECTED BY BOBUR</p>
+        </div>
+    </section>
+
+    <section id="teachers" class="py-24 max-w-6xl mx-auto px-6">
+        <h2 class="text-5xl font-black mb-16 border-l-8 border-white pl-8 uppercase">Asosiy Ustozlar</h2>
+        <div class="grid lg:grid-cols-2 gap-10">
+            <div class="ultra-glass p-12">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-3xl font-black">Bobur</h3>
+                    <span class="text-[9px] font-black bg-white text-black px-4 py-1.5 rounded-full uppercase tracking-widest">Director</span>
+                </div>
+                <div class="content-box">
+                    <div class="glass-item"><span>Tajriba:</span><span class="font-bold">8 Yil</span></div>
+                    <div class="glass-item"><span>Yo'nalish:</span><span class="font-bold">IELTS & Strategy</span></div>
+                    <p class="text-sm opacity-70 mt-6 text-center italic">"Ta'lim – bu dunyoni o'zgartirish uchun eng kuchli qurol."</p>
+                </div>
+            </div>
+            <div class="ultra-glass p-12">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-3xl font-black">Shaxboz</h3>
+                    <span class="text-[9px] font-black bg-white text-black px-4 py-1.5 rounded-full uppercase tracking-widest">IELTS Expert</span>
+                </div>
+                <div class="content-box">
+                    <div class="glass-item"><span>Tajriba:</span><span class="font-bold">2+ Yil</span></div>
+                    <div class="glass-item"><span>Natija:</span><span class="font-bold">Band 8.5+ Mastery</span></div>
+                </div>
+            </div>
+            <div class="ultra-glass p-12">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-3xl font-black">Muhammadjon</h3>
+                    <span class="text-[9px] font-black bg-white text-black px-4 py-1.5 rounded-full uppercase tracking-widest">Math Expert</span>
+                </div>
+                <div class="content-box">
+                    <div class="glass-item"><span>Yo'nalish:</span><span class="font-bold">Logika & Algebra</span></div>
+                    <div class="glass-item"><span>Dars uslubi:</span><span class="font-bold">Vizual & Sodda</span></div>
+                </div>
+            </div>
+            <div class="ultra-glass p-12">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-3xl font-black">Shohjahon</h3>
+                    <span class="text-[9px] font-black bg-white text-black px-4 py-1.5 rounded-full uppercase tracking-widest">SAT Expert</span>
+                </div>
+                <div class="content-box">
+                    <div class="glass-item"><span>Maqsad:</span><span class="font-bold">Global Admission</span></div>
+                    <div class="glass-item"><span>Tajriba:</span><span class="font-bold">2+ Yil</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-black mb-10 opacity-30 text-right uppercase tracking-[0.5em]">Support Mentors</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="ultra-glass p-10 text-center">
+                <h4 class="text-2xl font-black">Zayniddin</h4>
+                <div class="content-box">
+                    <div class="glass-item text-[10px] uppercase justify-center tracking-widest">Progress Control Mentor</div>
+                </div>
+            </div>
+            <div class="ultra-glass p-10 text-center">
+                <h4 class="text-2xl font-black">Sardor</h4>
+                <div class="content-box">
+                    <div class="glass-item text-[10px] uppercase justify-center tracking-widest">Academic Support Mentor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="socials" class="py-24 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+        <div class="ultra-glass p-16 text-center group">
+            <h4 class="text-3xl font-black mb-2">Telegram</h4>
+            <div class="content-box">
+                <div class="glass-item justify-center text-[11px] mb-6">@zaynddnn</div>
+                <a href="https://t.me/zaynddnn" target="_blank" class="bg-white text-black px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:invert transition">Kanalga qo'shilish</a>
+            </div>
+        </div>
+        <div class="ultra-glass p-16 text-center group">
+            <h4 class="text-3xl font-black mb-2">Instagram</h4>
+            <div class="content-box">
+                <div class="glass-item justify-center text-[11px] mb-6">@smart_star_academical</div>
+                <a href="https://instagram.com/smart_star_academical" target="_blank" class="bg-white text-black px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:invert transition">Profilni ko'rish</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="apply" class="pb-40 px-6">
+        <div class="ultra-glass max-w-5xl mx-auto p-16 md:p-24 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="text-center lg:text-left">
+                <h2 class="text-7xl font-black uppercase leading-none mb-6">Smart<br>Tanlov.</h2>
+                <p class="text-[12px] font-bold opacity-60 uppercase tracking-widest italic">Kelajagingiz uchun hozir qadam tashlang.</p>
+            </div>
+            <form id="tgForm" class="space-y-5">
+                <input type="text" id="userName" required placeholder="To'liq ismingiz" class="w-full p-6 rounded-3xl text-[10px] font-black uppercase tracking-widest">
+                <input type="tel" id="userPhone" required placeholder="Telefon raqamingiz (+998)" class="w-full p-6 rounded-3xl text-[10px] font-black uppercase tracking-widest">
+                
+                <div class="relative">
+                    <select id="userCourse" required class="w-full p-6 rounded-3xl text-[10px] font-black uppercase tracking-widest appearance-none cursor-pointer">
+                        <option value="" disabled selected>Qaysi kursni tanlaysiz?</option>
+                        <option value="IELTS">IELTS (General/Academic)</option>
+                        <option value="MATEMATIKA">MATEMATIKA (Pre-school/School)</option>
+                        <option value="SAT">SAT (English & Math)</option>
+                        <option value="GENERAL ENGLISH">GENERAL ENGLISH</option>
+                    </select>
+                    <div class="absolute right-6 top-6 pointer-events-none opacity-40">▼</div>
+                </div>
+
+                <button type="submit" class="w-full bg-white text-black py-6 rounded-3xl font-black uppercase text-[10px] tracking-[0.5em] hover:scale-95 transition shadow-2xl">Arizani yuborish</button>
+                <p id="statusMsg" class="text-[10px] font-black text-center uppercase hidden mt-4 tracking-widest"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center opacity-30 text-[10px] font-black uppercase tracking-[1em]">
+        © 2026 Smart Star Academy | Bobur
+    </footer>
+
+    <script>
+        const botToken = "8685609046:AAGVduld-jH-WHxtO1AT7MNTrQCPz46h13o"; 
+        const chatId = "8490005495"; 
+        
+        document.getElementById('tgForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const status = document.getElementById('statusMsg');
+            const name = document.getElementById('userName').value;
+            const phone = document.getElementById('userPhone').value;
+            const course = document.getElementById('userCourse').value;
+            
+            const message = `🚀 YANGI ARIZA%0A👤: ${name}%0A📞: ${phone}%0A📚 KURS: ${course}`;
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${message}`;
+            
+            status.classList.remove('hidden');
+            status.innerText = "Yuborilmoqda...";
+            
+            fetch(url).then(res => res.json()).then(data => {
+                if(data.ok) { 
+                    status.innerText = "✅ ARIZANGIZ MUVAFFARIYATLI YUBORILDI!"; 
+                    status.style.color = "#4ade80"; 
+                    this.reset(); 
+                } else {
+                    status.innerText = "❌ Xatolik yuz berdi. Qaytadan urinib ko'ring.";
+                    status.style.color = "#f87171";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
